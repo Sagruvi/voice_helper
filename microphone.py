@@ -21,7 +21,8 @@ opts = {"alias": ('pythonguru', 'пайтонгуру', 'гурупайтон'),
              "conv": ("валюта", "конвертер","доллар",'руб','евро'),
              "internet": ("открой", "вк", "гугл", "сайт", 'вконтакте', "ютуб"),
              "translator": ("переводчик","translate"),
-             "deals": ("дела","делишки", 'как сам', 'как дела')}}
+             "deals": ("дела","делишки", 'как сам', 'как дела'),
+             "includes": ("включи свет", "свет", "включить свет", "выключить свет")}}
 
 startTime = 0
 speak_engine = pyttsx3.init()
@@ -85,7 +86,7 @@ def recognize_cmd(cmd):
 
 ef
 execute_cmd(cmd):
-global startTime
+    global startTime
 if cmd == 'ctime':
     now = datetime.datetime.now()
     speak("Сейчас {0}:{1}".format(str(now.hour), str(now.minute)))
@@ -112,6 +113,9 @@ elif cmd == "stopStopwatch":
         startTime = 0
     else:
         speak("Секундомер не включен")
+elif cmd == "includes":
+    if content == 0:
+    else:
 elif cmd == 'deals':
     speak("Пока отлично.")
 else:
